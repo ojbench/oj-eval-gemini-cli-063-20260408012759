@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.10)
+project(MemoryRiver)
+file(GLOB SOURCES "*.cpp")
+if(SOURCES)
+    add_executable(code ${SOURCES})
+else()
+    add_custom_target(code COMMAND touch code)
+endif()
